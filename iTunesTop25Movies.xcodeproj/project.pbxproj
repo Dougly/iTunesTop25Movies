@@ -14,6 +14,7 @@
 		1148D3B61EEB2970000411BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1148D3B41EEB2970000411BC /* LaunchScreen.storyboard */; };
 		1148D3C11EEB2970000411BC /* iTunesTop25MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3C01EEB2970000411BC /* iTunesTop25MoviesTests.swift */; };
 		1148D3CF1EEB31E1000411BC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3CE1EEB31E0000411BC /* Movie.swift */; };
+		1148D3D11EEB3680000411BC /* ITunesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3D01EEB3680000411BC /* ITunesAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1148D3C01EEB2970000411BC /* iTunesTop25MoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesTop25MoviesTests.swift; sourceTree = "<group>"; };
 		1148D3C21EEB2971000411BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1148D3CE1EEB31E0000411BC /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		1148D3D01EEB3680000411BC /* ITunesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				1148D3CE1EEB31E0000411BC /* Movie.swift */,
+				1148D3D01EEB3680000411BC /* ITunesAPIClient.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1148D3AE1EEB296F000411BC /* ViewController.swift in Sources */,
+				1148D3D11EEB3680000411BC /* ITunesAPIClient.swift in Sources */,
 				1148D3AC1EEB296F000411BC /* AppDelegate.swift in Sources */,
 				1148D3CF1EEB31E1000411BC /* Movie.swift in Sources */,
 			);

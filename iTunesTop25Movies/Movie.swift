@@ -22,7 +22,8 @@ class Movie {
 
         let dateDictionary = json["im:releaseDate"] as! [String : Any]
         let dateStringDictionary = dateDictionary["attributes"] as! [String : String]
-        self.releaseDate = dateStringDictionary["label"]!
+        let dateAsString =  dateStringDictionary["label"]!
+        self.releaseDate = dateAsString
         
         let imageDictionary = json["im:image"] as! [[String : Any]]
         let imageURL = imageDictionary[2]["label"] as! String
