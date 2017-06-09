@@ -22,6 +22,7 @@ class DataStore {
                 let movie = Movie(with: movie)
                 self.movies.append(movie)
                 print(movie.title)
+                print(movie.price)
             }
 
         }
