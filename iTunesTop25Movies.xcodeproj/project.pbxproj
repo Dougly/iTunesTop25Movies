@@ -16,6 +16,7 @@
 		1148D3D11EEB3680000411BC /* ITunesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3D01EEB3680000411BC /* ITunesAPIClient.swift */; };
 		1148D3D51EEB389C000411BC /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3D41EEB389C000411BC /* MovieListViewController.swift */; };
 		1148D3D71EEB38DD000411BC /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3D61EEB38DD000411BC /* MovieDetailViewController.swift */; };
+		1148D3D91EEB3989000411BC /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3D81EEB3989000411BC /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		1148D3D01EEB3680000411BC /* ITunesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesAPIClient.swift; sourceTree = "<group>"; };
 		1148D3D41EEB389C000411BC /* MovieListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieListViewController.swift; path = ../MovieListViewController.swift; sourceTree = "<group>"; };
 		1148D3D61EEB38DD000411BC /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		1148D3D81EEB3989000411BC /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				1148D3CE1EEB31E0000411BC /* Movie.swift */,
 				1148D3D01EEB3680000411BC /* ITunesAPIClient.swift */,
+				1148D3D81EEB3989000411BC /* DataStore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1148D3D51EEB389C000411BC /* MovieListViewController.swift in Sources */,
+				1148D3D91EEB3989000411BC /* DataStore.swift in Sources */,
 				1148D3D71EEB38DD000411BC /* MovieDetailViewController.swift in Sources */,
 				1148D3D11EEB3680000411BC /* ITunesAPIClient.swift in Sources */,
 				1148D3AC1EEB296F000411BC /* AppDelegate.swift in Sources */,

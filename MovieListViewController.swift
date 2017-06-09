@@ -10,8 +10,11 @@ import UIKit
 
 class MovieListViewController: UIViewController {
     
+    let sharedInstance = DataStore.sharedInstance
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        sharedInstance.fetchMovies()
     }
     
 }
