@@ -22,8 +22,7 @@ class ITunesAPIClient {
                         let responseJSON = try JSONSerialization.jsonObject(with: data, options: []) as! [String : Any]
                         let feed = responseJSON["feed"] as! [String: Any]
                         let entry = feed["entry"] as! [[String : Any]]
-                        completion(entry)
-                        
+                        completion(entry)                        
                     } catch {
                         if let response = response {
                             print("Could not serialize data into JSON\nERROR: \(error)\nRESPONSE: \(response)")
