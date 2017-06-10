@@ -89,7 +89,6 @@
 		1148D3AA1EEB296F000411BC /* iTunesTop25Movies */ = {
 			isa = PBXGroup;
 			children = (
-				1148D3DC1EEB7480000411BC /* sampleJSON.json */,
 				1148D3CC1EEB31B3000411BC /* Model */,
 				1148D3CD1EEB31BE000411BC /* View */,
 				1148D3CB1EEB31A4000411BC /* Controller */,
@@ -103,6 +102,7 @@
 		1148D3BF1EEB2970000411BC /* iTunesTop25MoviesTests */ = {
 			isa = PBXGroup;
 			children = (
+				1148D3DC1EEB7480000411BC /* sampleJSON.json */,
 				1148D3C01EEB2970000411BC /* iTunesTop25MoviesTests.swift */,
 				1148D3DA1EEB740C000411BC /* MovieTest.swift */,
 				1148D3C21EEB2971000411BC /* Info.plist */,

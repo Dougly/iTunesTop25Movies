@@ -16,7 +16,7 @@ class MovieTest: XCTestCase {
     
     lazy var sampleJSON: [[String : Any]] = {
         
-        if let path = Bundle.main.path(forResource: "sampleJSON", ofType: "json") {
+        if let path = Bundle(for: type(of: self)).path(forResource: "sampleJSON", ofType: "json") {
             do {
                 let url = URL(fileURLWithPath: path)
                 let data = try Data(contentsOf: url)
