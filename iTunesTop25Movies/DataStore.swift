@@ -23,6 +23,8 @@ class DataStore {
                 self.movies.append(movie)
                 print(movie.title)
                 print(movie.price)
+                print(movie.releaseDate)
+                print(movie.posterImageURLString)
             }
 
         }

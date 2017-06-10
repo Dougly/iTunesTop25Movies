@@ -10,47 +10,34 @@ import UIKit
 
 class Movie {
     
-    let title: String
-//    let releaseDate: String
-    let price: String
-//    let posterURLString: String
+    var title: String?
+    var price: String?
+    var releaseDate: String?
+    var posterImageURLString: String?
     var posterImage: UIImage?
     
     init(with json: [String : Any]) {
-        
+        // Title
         let titleDictionary = json["im:name"] as? [String : String]
-        if let titleDict = titleDictionary {
-            let title = titleDict["label"]
-            if let title = title {
-                self.title = title
-            } else {
-                self.title = "Error getting title"
-            }
-        } else {
-            self.title = "Error getting title"
-        }
+            let title = titleDictionary?["label"]
+            self.title = title
         
-        
+        // Price
         let priceDictionary = json["im:price"] as? [String : Any]
-        if let priceDict = priceDictionary {
-            let price = priceDict["label"] as? String
-            if let price = price {
-                self.price = price
-            } else {
-                self.price = "N/A"
-            }
-        } else {
-            self.price = "N/A"
+        let price = priceDictionary?["label"] as? String
+        self.price = price
+        
+        // Release Date
+        let dateDictionary = json["im:releaseDate"] as? [String : Any]
+        let dateStringDict = dateDictionary?["attributes"] as? [String : String]
+        if let dateStringDict = dateStringDict {
+            let date = dateStringDict["label"]
+            self.releaseDate = date
         }
-//
-//        let dateDictionary = json["im:releaseDate"] as! [String : Any]
-//        let dateStringDictionary = dateDictionary["attributes"] as! [String : String]
-//        let dateAsString =  dateStringDictionary["label"]!
-//        self.releaseDate = dateAsString
-//        
-//        let imageDictionary = json["im:image"] as! [[String : Any]]
-//        let imageURL = imageDictionary[2]["label"] as! String
-//        self.posterURLString = imageURL
+        
+        // Poster Image URL String
+        let imageDictionary = json["im:image"] as? [[String : Any]]
+        let imageURL = imageDictionary?[2]["label"] as? String
+        self.posterImageURLString = imageURL
     }
-    
 }
