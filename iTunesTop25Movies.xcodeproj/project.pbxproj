@@ -18,7 +18,7 @@
 		1148D3D71EEB38DD000411BC /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3D61EEB38DD000411BC /* MovieDetailViewController.swift */; };
 		1148D3D91EEB3989000411BC /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3D81EEB3989000411BC /* DataStore.swift */; };
 		1148D3DB1EEB740C000411BC /* MovieTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3DA1EEB740C000411BC /* MovieTest.swift */; };
-		1148D3DD1EEB7480000411BC /* sampleJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 1148D3DC1EEB7480000411BC /* sampleJSON.json */; };
+		1148D3DD1EEB7480000411BC /* sampleJSON in Resources */ = {isa = PBXBuildFile; fileRef = 1148D3DC1EEB7480000411BC /* sampleJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		1148D3D61EEB38DD000411BC /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		1148D3D81EEB3989000411BC /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		1148D3DA1EEB740C000411BC /* MovieTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTest.swift; sourceTree = "<group>"; };
-		1148D3DC1EEB7480000411BC /* sampleJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleJSON.json; sourceTree = "<group>"; };
+		1148D3DC1EEB7480000411BC /* sampleJSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleJSON; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				1148D3C01EEB2970000411BC /* iTunesTop25MoviesTests.swift */,
-				1148D3DC1EEB7480000411BC /* sampleJSON.json */,
+				1148D3DC1EEB7480000411BC /* sampleJSON */,
 				1148D3DA1EEB740C000411BC /* MovieTest.swift */,
 				1148D3C21EEB2971000411BC /* Info.plist */,
 			);
@@ -233,7 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1148D3DD1EEB7480000411BC /* sampleJSON.json in Resources */,
+				1148D3DD1EEB7480000411BC /* sampleJSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

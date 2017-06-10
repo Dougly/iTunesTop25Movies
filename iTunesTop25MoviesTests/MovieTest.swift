@@ -13,32 +13,34 @@ import XCTest
 
 class MovieTest: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    lazy var sampleJSON: [[String : Any]] = {
+        
+        if let path = Bundle.main.path(forResource: "sampleJSON", ofType: "json") {
+            do {
+                let url = URL(fileURLWithPath: path)
+                let data = try Data(contentsOf: url)
+                let localJSON = try JSONSerialization.jsonObject(with: data, options: []) as! [String : Any]
+                let feed = localJSON["feed"] as! [String: Any]
+                let entry = feed["entry"] as! [[String : Any]]
+                return entry
+            } catch {
+                print("issue with url")
+            }
+        } else {
+            print("Invalid filename/path.")
+        }
+        return []
+    }()
     
     func testInit() {
-        
+        for item in sampleJSON {
+            let movie = Movie(with: item)
+            print(movie.title!)
+        }
         
         
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
     
 }
