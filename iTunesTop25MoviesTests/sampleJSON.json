@@ -10,13 +10,13 @@
         },
         "entry": [
                   {
-                  "im:name": {
+                  "im:namee": {
                   "label": "Beauty and the Beast (2017)"
                   },
                   "rights": {
                   "label": "© 2017 Disney Enterprises, Inc. All Rights Reserved."
                   },
-                  "im:image": [
+                  "im:imagee": [
                                {
                                "label": "http://is4.mzstatic.com/image/thumb/Video117/v4/44/20/26/44202630-a564-546f-1c45-573c38d185e3/pr_source.lsr/60x60bb-85.jpg",
                                "attributes": {
@@ -46,7 +46,7 @@
                   "currency": "USD"
                   }
                   },
-                  "im:price": {
+                  "im:pricee": {
                   "label": "$19.99",
                   "attributes": {
                   "amount": "19.99000",
@@ -100,7 +100,7 @@
                   "label": "Kids & Family"
                   }
                   },
-                  "im:releaseDate": {
+                  "im:releaseDatee": {
                   "label": "2017-03-17T00:00:00-07:00",
                   "attributes": {
                   "label": "March 17, 2017"
