@@ -47,6 +47,6 @@ class Movie {
 
 
 // This enum contains all the possible states a movie record can be in
-enum MovieState {
+enum MovieState: String {
     case new, downloaded, failed
 }

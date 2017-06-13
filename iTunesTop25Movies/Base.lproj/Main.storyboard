@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,9 +81,59 @@
                     <view key="view" contentMode="scaleToFill" id="Ghr-A0-mxz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vw0-in-gIs">
+                                <rect key="frame" x="104.5" y="74" width="165.5" height="249.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vw0-in-gIs" secondAttribute="height" multiplier="113:170" id="jtV-Rg-g5N"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="OEh-Ht-bAQ">
+                                <rect key="frame" x="177" y="189.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rh5-77-JC8">
+                                <rect key="frame" x="137" y="323.5" width="100.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLO-Sb-Jfk">
+                                <rect key="frame" x="168" y="344" width="39" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UD-R1-X4d">
+                                <rect key="frame" x="120" y="364.5" width="134" height="302.5"/>
+                                <state key="normal" title="Purchase on iTunes"/>
+                                <connections>
+                                    <action selector="purchaseOnITunesTapped:" destination="zOv-3Y-TPr" eventType="touchUpInside" id="HJA-uk-Yhe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MLO-Sb-Jfk" firstAttribute="centerX" secondItem="rh5-77-JC8" secondAttribute="centerX" id="1OR-fT-9gG"/>
+                            <constraint firstItem="MLO-Sb-Jfk" firstAttribute="top" secondItem="rh5-77-JC8" secondAttribute="bottom" id="Drq-2w-tB2"/>
+                            <constraint firstItem="2UD-R1-X4d" firstAttribute="bottom" secondItem="kae-fn-Y5j" secondAttribute="top" id="H75-jB-0pk"/>
+                            <constraint firstItem="2UD-R1-X4d" firstAttribute="centerX" secondItem="Ghr-A0-mxz" secondAttribute="centerX" id="UTp-lE-r60"/>
+                            <constraint firstItem="rh5-77-JC8" firstAttribute="top" secondItem="vw0-in-gIs" secondAttribute="bottom" id="aU1-qH-ev0"/>
+                            <constraint firstItem="vw0-in-gIs" firstAttribute="bottom" secondItem="Ghr-A0-mxz" secondAttribute="centerYWithinMargins" constant="-10" id="khm-7n-hfm"/>
+                            <constraint firstItem="vw0-in-gIs" firstAttribute="centerX" secondItem="Ghr-A0-mxz" secondAttribute="centerX" id="l1c-RP-uSX"/>
+                            <constraint firstItem="vw0-in-gIs" firstAttribute="top" secondItem="VJT-C1-rLs" secondAttribute="bottom" constant="10" id="lRn-RH-dV5"/>
+                            <constraint firstItem="OEh-Ht-bAQ" firstAttribute="centerY" secondItem="vw0-in-gIs" secondAttribute="centerY" id="pHh-B4-LUD"/>
+                            <constraint firstItem="OEh-Ht-bAQ" firstAttribute="centerX" secondItem="vw0-in-gIs" secondAttribute="centerX" id="r86-FU-p50"/>
+                            <constraint firstItem="rh5-77-JC8" firstAttribute="centerX" secondItem="vw0-in-gIs" secondAttribute="centerX" id="tUs-Gt-acw"/>
+                            <constraint firstItem="2UD-R1-X4d" firstAttribute="top" secondItem="MLO-Sb-Jfk" secondAttribute="bottom" id="tdN-Vx-QUh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eQz-Dh-kBe"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="OEh-Ht-bAQ" id="cNB-gI-UyH"/>
+                        <outlet property="moviePosterImageView" destination="vw0-in-gIs" id="JTt-1x-9mj"/>
+                        <outlet property="priceLabel" destination="MLO-Sb-Jfk" id="7Tu-gs-HRS"/>
+                        <outlet property="releaseDateLabel" destination="rh5-77-JC8" id="qdX-2D-1Zw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdv-g7-Ne4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
