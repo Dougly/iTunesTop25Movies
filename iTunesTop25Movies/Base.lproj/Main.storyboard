@@ -64,7 +64,7 @@
         <!--Movie Detail View Controller-->
         <scene sceneID="mSx-oh-NHU">
             <objects>
-                <viewController id="zOv-3Y-TPr" customClass="MovieDetailViewController" customModule="iTunesTop25Movies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" id="zOv-3Y-TPr" customClass="MovieDetailViewController" customModule="iTunesTop25Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VJT-C1-rLs"/>
                         <viewControllerLayoutGuide type="bottom" id="kae-fn-Y5j"/>
