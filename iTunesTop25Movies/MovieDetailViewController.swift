@@ -14,7 +14,6 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     let dataStore = DataStore.sharedInstance
     var movie: Movie?
 
@@ -22,12 +21,12 @@ class MovieDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = movie?.title
-        activityIndicator.startAnimating()
         populateViews()
     }
     
     
     func populateViews() {
+        activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         releaseDateLabel.text = movie?.releaseDate
         priceLabel.text = movie?.price
@@ -51,17 +50,12 @@ class MovieDetailViewController: UIViewController {
     
     @IBAction func purchaseOnITunesTapped(_ sender: UIButton) {
         guard let itunesLink = movie?.itunesLink else { return }
-        print("got ituneslink")
         if let url = URL(string: itunesLink) {
-            print("got url")
             if UIApplication.shared.canOpenURL(url) {
-                print("can open url")
                 UIApplication.shared.open(url, options: [UIApplicationOpenURLOptionUniversalLinksOnly : 1], completionHandler: nil)
             }
         }
     }
     
     
-    
-   
 }

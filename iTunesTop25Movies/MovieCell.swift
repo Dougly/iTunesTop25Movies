@@ -12,6 +12,7 @@ class MovieCell: UITableViewCell {
     
     let movieCellView = MovieCellView()
     
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.contentView.addSubview(movieCellView)

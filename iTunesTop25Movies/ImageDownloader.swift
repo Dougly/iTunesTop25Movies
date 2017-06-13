@@ -12,9 +12,11 @@ class ImageDownloader {
     
     let movie: Movie
     
+    
     init(movie: Movie) {
         self.movie = movie
     }
+    
 
     func downloadPosterImage(completion: @escaping () -> Void) {
         guard let posterImageURLString = movie.posterImageURLString else { return}

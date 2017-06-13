@@ -14,7 +14,7 @@ class ITunesAPIClient {
         let url = URL(string: string)
         let session = URLSession.shared
         
-        // If url is valid attemt to obtain JSON and call completion
+        // If url is valid attemt to obtain JSON and pass serialized JSON to completion handler
         if let url = url {
             session.dataTask(with: url, completionHandler: { (data, response, error) in
                 if let data = data {

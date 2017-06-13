@@ -8,6 +8,11 @@
 
 import UIKit
 
+// This enum contains all the possible states a movie record can be in
+enum MovieState: String {
+    case new, downloaded, failed
+}
+
 class Movie {
     
     var title: String?
@@ -17,6 +22,7 @@ class Movie {
     var itunesLink: String?
     var posterImage: UIImage?
     var state: MovieState = .new
+    
     
     init(with json: [String : Any]) {
         // Title
@@ -46,14 +52,9 @@ class Movie {
         let idDictionary = json["id"] as? [String : Any]
         let itunesLink = idDictionary?["label"] as? String
         self.itunesLink = itunesLink
-        
     }
-    
+   
     
 }
 
 
-// This enum contains all the possible states a movie record can be in
-enum MovieState: String {
-    case new, downloaded, failed
-}

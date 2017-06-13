@@ -11,10 +11,11 @@ import UIKit
 class DataStore {
     
     static let sharedInstance = DataStore()
-    private init() {}
-    
     let top25MoviesURL = "https://itunes.apple.com/us/rss/topmovies/limit=25/json"
     var movies: [Movie] = []
+
+    
+    private init() {}
 
     
     func fetchMovies(completion: @escaping () -> Void) {
@@ -26,6 +27,6 @@ class DataStore {
             completion()
         }
     }
-    
+  
     
 }

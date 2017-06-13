@@ -33,15 +33,18 @@ class MovieListViewController: UIViewController {
         }
     }
     
+    
 }
 
 
 // Table View Delegate and DataSource
 extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataStore.movies.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! MovieCell
@@ -52,9 +55,11 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedRow = indexPath.row
         performSegue(withIdentifier: "showDetail", sender: self)
     }
+    
     
 }
