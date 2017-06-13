@@ -14,6 +14,7 @@ class MovieListViewController: UIViewController {
     let dataStore = DataStore.sharedInstance
     var selectedRow = 0
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Top 25 Movies"
@@ -23,7 +24,7 @@ class MovieListViewController: UIViewController {
             }
         }
     }
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
@@ -34,6 +35,8 @@ class MovieListViewController: UIViewController {
     
 }
 
+
+// Table View Delegate and DataSource
 extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,4 +53,5 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
         selectedRow = indexPath.row
         performSegue(withIdentifier: "showDetail", sender: self)
     }
+    
 }
