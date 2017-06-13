@@ -15,6 +15,7 @@ class Movie {
     var releaseDate: String?
     var posterImageURLString: String?
     var posterImage: UIImage?
+    var state: MovieState = .new
     
     init(with json: [String : Any]) {
         // Title
@@ -40,4 +41,12 @@ class Movie {
         let imageURL = imageDictionary?[2]["label"] as? String
         self.posterImageURLString = imageURL
     }
+    
+    
+}
+
+
+// This enum contains all the possible states a movie record can be in
+enum MovieState {
+    case new, downloaded, failed
 }

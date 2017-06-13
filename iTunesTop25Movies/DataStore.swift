@@ -15,6 +15,7 @@ class DataStore {
     
     let top25MoviesURL = "https://itunes.apple.com/us/rss/topmovies/limit=25/json"
     var movies: [Movie] = []
+
     
     // TODO: Move this to NSOperation custom class
     func fetchMovies() {

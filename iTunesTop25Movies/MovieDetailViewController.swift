@@ -10,7 +10,8 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
     
-    
+    let dataStore = DataStore.sharedInstance
+
     override func viewDidLoad() {
         super.viewDidLoad()
        

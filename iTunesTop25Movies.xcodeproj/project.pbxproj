@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1112811F1EEF6FBF002A795E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1112811E1EEF6FBF002A795E /* ImageDownloader.swift */; };
 		1148D3AC1EEB296F000411BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3AB1EEB296F000411BC /* AppDelegate.swift */; };
 		1148D3B11EEB2970000411BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1148D3AF1EEB2970000411BC /* Main.storyboard */; };
 		1148D3B31EEB2970000411BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1148D3B21EEB2970000411BC /* Assets.xcassets */; };
 		1148D3B61EEB2970000411BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1148D3B41EEB2970000411BC /* LaunchScreen.storyboard */; };
-		1148D3C11EEB2970000411BC /* iTunesTop25MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3C01EEB2970000411BC /* iTunesTop25MoviesTests.swift */; };
 		1148D3CF1EEB31E1000411BC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3CE1EEB31E0000411BC /* Movie.swift */; };
 		1148D3D11EEB3680000411BC /* ITunesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3D01EEB3680000411BC /* ITunesAPIClient.swift */; };
 		1148D3D51EEB389C000411BC /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1148D3D41EEB389C000411BC /* MovieListViewController.swift */; };
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1112811E1EEF6FBF002A795E /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		1148D3A81EEB296F000411BC /* iTunesTop25Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesTop25Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1148D3AB1EEB296F000411BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1148D3B01EEB2970000411BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		1148D3B51EEB2970000411BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1148D3B71EEB2970000411BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1148D3BC1EEB2970000411BC /* iTunesTop25MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesTop25MoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1148D3C01EEB2970000411BC /* iTunesTop25MoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesTop25MoviesTests.swift; sourceTree = "<group>"; };
 		1148D3C21EEB2971000411BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1148D3CE1EEB31E0000411BC /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		1148D3D01EEB3680000411BC /* ITunesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesAPIClient.swift; sourceTree = "<group>"; };
@@ -103,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				1148D3DC1EEB7480000411BC /* sampleJSON.json */,
-				1148D3C01EEB2970000411BC /* iTunesTop25MoviesTests.swift */,
 				1148D3DA1EEB740C000411BC /* MovieTest.swift */,
 				1148D3C21EEB2971000411BC /* Info.plist */,
 			);
@@ -126,6 +125,7 @@
 				1148D3CE1EEB31E0000411BC /* Movie.swift */,
 				1148D3D01EEB3680000411BC /* ITunesAPIClient.swift */,
 				1148D3D81EEB3989000411BC /* DataStore.swift */,
+				1112811E1EEF6FBF002A795E /* ImageDownloader.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -246,6 +246,7 @@
 			files = (
 				1148D3D51EEB389C000411BC /* MovieListViewController.swift in Sources */,
 				1148D3D91EEB3989000411BC /* DataStore.swift in Sources */,
+				1112811F1EEF6FBF002A795E /* ImageDownloader.swift in Sources */,
 				1148D3D71EEB38DD000411BC /* MovieDetailViewController.swift in Sources */,
 				1148D3D11EEB3680000411BC /* ITunesAPIClient.swift in Sources */,
 				1148D3AC1EEB296F000411BC /* AppDelegate.swift in Sources */,
@@ -258,7 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1148D3DB1EEB740C000411BC /* MovieTest.swift in Sources */,
-				1148D3C11EEB2970000411BC /* iTunesTop25MoviesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
