@@ -17,13 +17,13 @@ class DataStore {
     var movies: [Movie] = []
 
     
-    // TODO: Move this to NSOperation custom class
-    func fetchMovies() {
+    func fetchMovies(completion: @escaping () -> Void) {
         ITunesAPIClient.getMovieInfo(fromURL: top25MoviesURL) { (top25movies) in
             for movie in top25movies {
                 let movie = Movie(with: movie)
                 self.movies.append(movie)
             }
+            completion()
         }
     }
     
