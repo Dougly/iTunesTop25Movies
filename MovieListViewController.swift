@@ -12,15 +12,23 @@ class MovieListViewController: UIViewController {
     
     @IBOutlet weak var movieListTableView: UITableView!
     let dataStore = DataStore.sharedInstance
-
+    var selectedRow = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Top 25 Movies"
+        navigationItem.title = "Top 25 Movies"
         dataStore.fetchMovies {
             DispatchQueue.main.async {
                 self.movieListTableView.reloadData()
             }
+        }
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            let movieDetailViewController = segue.destination as! MovieDetailViewController
+            movieDetailViewController.movie = dataStore.movies[selectedRow]
         }
     }
     
@@ -38,4 +46,8 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath.row
+        performSegue(withIdentifier: "showDetail", sender: self)
+    }
 }

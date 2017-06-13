@@ -11,9 +11,17 @@ import UIKit
 class MovieDetailViewController: UIViewController {
     
     let dataStore = DataStore.sharedInstance
+    var movie: Movie?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        self.navigationItem.title = movie?.title
+        
     }
+    
+    
+    
+    
+    
+   
 }
