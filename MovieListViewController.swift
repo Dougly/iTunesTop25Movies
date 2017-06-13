@@ -44,9 +44,12 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell")
-        cell?.textLabel?.text = dataStore.movies[indexPath.row].title
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell") as! MovieCell
+        let movie = dataStore.movies[indexPath.row]
+        cell.movieCellView.titleLabel.text = movie.title
+        cell.movieCellView.releaseDateLabel.text = movie.releaseDate
+        cell.movieCellView.priceLabel.text = movie.price
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
