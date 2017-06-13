@@ -14,6 +14,7 @@ class MovieCellView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     
     override init(frame: CGRect) {
@@ -32,6 +33,8 @@ class MovieCellView: UIView {
         Bundle.main.loadNibNamed("MovieCellView", owner: self, options: nil)
         self.addSubview(contentView)
         self.setEqualConstraints(for: contentView)
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
     }
     
     

@@ -52,6 +52,11 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.movieCellView.titleLabel.text = movie.title
         cell.movieCellView.releaseDateLabel.text = movie.releaseDate
         cell.movieCellView.priceLabel.text = movie.price
+        
+        if !dataStore.movies.isEmpty {
+            cell.movieCellView.activityIndicator.stopAnimating()
+        }
+        
         return cell
     }
     

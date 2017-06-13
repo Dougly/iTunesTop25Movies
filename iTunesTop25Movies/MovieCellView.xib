@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieCellView" customModule="iTunesTop25Movies" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="ha6-WJ-g8m" id="i8m-cC-GbP"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Ltb-Dz-otz"/>
                 <outlet property="priceLabel" destination="OBM-Hp-TzS" id="6gF-Dt-hOY"/>
                 <outlet property="releaseDateLabel" destination="aDP-hh-CsA" id="I2b-tU-PrH"/>
@@ -41,9 +42,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ha6-WJ-g8m">
+                    <rect key="frame" x="185" y="12" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ha6-WJ-g8m" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9fv-h2-0dI"/>
+                <constraint firstItem="ha6-WJ-g8m" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Avp-lw-Q7e"/>
                 <constraint firstItem="aDP-hh-CsA" firstAttribute="leading" secondItem="AKE-zX-vBX" secondAttribute="leading" id="Cfb-zB-o8Q"/>
                 <constraint firstItem="AKE-zX-vBX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="MjU-69-Pmo"/>
                 <constraint firstItem="AKE-zX-vBX" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Qwv-ID-AUy"/>

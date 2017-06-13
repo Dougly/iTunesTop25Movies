@@ -8,7 +8,7 @@
 
 import UIKit
 
-// This enum contains all the possible states a movie record can be in
+// This enum contains all the possible states a Movie can be in
 enum MovieState: String {
     case new, downloaded, failed
 }

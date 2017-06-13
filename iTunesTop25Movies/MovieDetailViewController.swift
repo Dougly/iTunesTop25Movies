@@ -52,7 +52,7 @@ class MovieDetailViewController: UIViewController {
         guard let itunesLink = movie?.itunesLink else { return }
         if let url = URL(string: itunesLink) {
             if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [UIApplicationOpenURLOptionUniversalLinksOnly : 1], completionHandler: nil)
+                UIApplication.shared.open(url, options: [UIApplicationOpenURLOptionUniversalLinksOnly : 0], completionHandler: nil)
             }
         }
     }
