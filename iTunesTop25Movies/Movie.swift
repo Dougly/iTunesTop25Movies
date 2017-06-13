@@ -14,6 +14,7 @@ class Movie {
     var price: String?
     var releaseDate: String?
     var posterImageURLString: String?
+    var itunesLink: String?
     var posterImage: UIImage?
     var state: MovieState = .new
     
@@ -40,6 +41,12 @@ class Movie {
         let imageDictionary = json["im:image"] as? [[String : Any]]
         let imageURL = imageDictionary?[2]["label"] as? String
         self.posterImageURLString = imageURL
+        
+        // iTunes Link
+        let idDictionary = json["id"] as? [String : Any]
+        let itunesLink = idDictionary?["label"] as? String
+        self.itunesLink = itunesLink
+        
     }
     
     

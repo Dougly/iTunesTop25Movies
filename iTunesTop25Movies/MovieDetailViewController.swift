@@ -50,9 +50,17 @@ class MovieDetailViewController: UIViewController {
     
     
     @IBAction func purchaseOnITunesTapped(_ sender: UIButton) {
-        
-        
+        guard let itunesLink = movie?.itunesLink else { return }
+        print("got ituneslink")
+        if let url = URL(string: itunesLink) {
+            print("got url")
+            if UIApplication.shared.canOpenURL(url) {
+                print("can open url")
+                UIApplication.shared.open(url, options: [UIApplicationOpenURLOptionUniversalLinksOnly : 1], completionHandler: nil)
+            }
+        }
     }
+    
     
     
    

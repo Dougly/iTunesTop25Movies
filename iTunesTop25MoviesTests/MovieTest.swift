@@ -48,33 +48,38 @@ class MovieTest: XCTestCase {
         let expectedFirstPrice: String? = nil
         let expectedFirstReleaseDate: String? = nil
         let expectedFirstPosterImageURL: String? = nil
+        let expectedFirstItunesLink: String? = nil
         
         let resultFirstTitle: String? = movies[0].title
         let resultFirstPrice: String? = movies[0].price
         let resultFirstReleaseDate: String? = movies[0].releaseDate
         let resultFirstPosterImageURL: String? = movies[0].posterImageURLString
+        let resultFirstItunesLink: String? = movies[0].itunesLink
         
         XCTAssert(expectedFirstTitle == resultFirstTitle, "Expected: \(String(describing: expectedFirstTitle)), got: \(String(describing: resultFirstTitle))")
         XCTAssert(expectedFirstPrice == resultFirstPrice,"Expected: \(String(describing: expectedFirstPrice)), got: \(String(describing: resultFirstPrice))")
         XCTAssert(expectedFirstReleaseDate == resultFirstReleaseDate, "Expected: \(String(describing: expectedFirstReleaseDate)), got: \(String(describing: resultFirstReleaseDate))")
         XCTAssert(expectedFirstPosterImageURL == resultFirstPosterImageURL, "Expected: \(String(describing: expectedFirstPosterImageURL)), got: \(String(describing: resultFirstPosterImageURL))")
+        XCTAssert(expectedFirstItunesLink == resultFirstItunesLink, "Expected: \(String(describing: expectedFirstItunesLink)), got: \(String(describing: resultFirstItunesLink))")
         
         // Test non-nil values
         let expectedSecondTitle = "Logan"
         let expectedSecondPrice = "$14.99"
         let expectedSecondReleaseDate = "March 3, 2017"
         let expectedSecondPosterURL = "http://is2.mzstatic.com/image/thumb/Video117/v4/d1/69/35/d16935f1-38b1-eccd-e717-f8907ccb7afb/pr_source.lsr/170x170bb-85.jpg"
+        let expectedSecondItunesLink = "https://itunes.apple.com/us/movie/logan/id1207483880?uo=2"
         
         let resultSecondTitle = movies[1].title
         let resultSecondPrice = movies[1].price
         let resultSecondReleaseDate = movies[1].releaseDate
         let resultSecondPosterURL = movies[1].posterImageURLString
+        let resultSecondItunesLink = movies[1].itunesLink
     
         XCTAssert(expectedSecondTitle == resultSecondTitle, "Expected \(expectedSecondTitle) got: \(resultSecondTitle ?? "nil")")
         XCTAssert(expectedSecondPrice == resultSecondPrice, "Expected \(expectedSecondPrice) got: \(resultSecondPrice ?? "nil")")
         XCTAssert(expectedSecondReleaseDate == resultSecondReleaseDate, "Expected \(expectedSecondReleaseDate) got: \(resultSecondReleaseDate ?? "nil")")
         XCTAssert(expectedSecondPosterURL == resultSecondPosterURL, "Expected \(expectedSecondPosterURL) got: \(resultSecondPosterURL ?? "nil")")
-
+        XCTAssert(expectedSecondItunesLink == resultSecondItunesLink, "Expected \(expectedSecondItunesLink) got: \(resultSecondItunesLink ?? "nil")")
     
     
     }
