@@ -24,8 +24,8 @@ class MovieDetailViewController: UIViewController {
         self.navigationItem.title = movie?.title
         activityIndicator.startAnimating()
         populateViews()
-        
     }
+    
     
     func populateViews() {
         activityIndicator.hidesWhenStopped = true
@@ -35,15 +35,10 @@ class MovieDetailViewController: UIViewController {
         if movie?.state == .new || movie?.state == .failed {
             if let movie = movie {
                 let imageDownloader = ImageDownloader(movie: movie)
-                imageDownloader.downloadPosterImage { image in
+                imageDownloader.downloadPosterImage {
                     DispatchQueue.main.async {
                         self.activityIndicator.stopAnimating()
-                        if image != nil {
-                            self.moviePosterImageView.image = image
-                            self.movie?.posterImage = image
-                        } else {
-                            self.moviePosterImageView.backgroundColor = .black
-                        }
+                        self.moviePosterImageView.image = movie.posterImage
                     }
                 }
             }

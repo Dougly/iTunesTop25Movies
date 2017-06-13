@@ -16,7 +16,7 @@ class ImageDownloader {
         self.movie = movie
     }
 
-    func downloadPosterImage(completion: @escaping (UIImage?) -> Void) {
+    func downloadPosterImage(completion: @escaping () -> Void) {
         guard let posterImageURLString = movie.posterImageURLString else { return}
         let url = URL(string: posterImageURLString)
         let session = URLSession.shared
@@ -27,14 +27,17 @@ class ImageDownloader {
                     let responseImageData = UIImage(data: data)
                     if let image = responseImageData {
                         self.movie.state = .downloaded
-                        completion(image)
+                        self.movie.posterImage = image
+                        completion()
                     } else {
                         print("could not convert data to image")
                         self.movie.state = .failed
-                        completion(nil)
+                        self.movie.posterImage = #imageLiteral(resourceName: "brokenImage")
+                        completion()
                     }
                 } else {
-                    completion(nil)
+                    self.movie.posterImage = #imageLiteral(resourceName: "brokenImage")
+                    completion()
                 }
             }).resume()
         }
